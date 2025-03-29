@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    /* Using this is a good practice and wil reduce complcation in placing different elements.*/
+   
+}  
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 100vh; 
+    /* so that it covers the complete scroll-timeline-name: ; */
+    line-height: 1.5;  /Make your work more neat/
+}
+#box {
+    display: flex;
+    flex-direction: column;
+    column-gap: 8rem;
+    opacity: 60%;
+    margin-left: 80px;
+    margin-top: 50px;
+  }
+.image-gradient{
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;  /* So that you when you add something to the content it doesen't add to the image and vice versa.*/
+}
+.layer-blur{
+    top: 20%;
+    right: 0;
+    rotate: 30deg;
+    box-shadow: 0px 0px 700px 15px wheat;
+    height: 0;
+    width: 30rem;
+    
+
+}
+
+/CONTAINER/
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    z-index: 999;    /* To place every element of the header above the rest of the elements.*/
+}
+
+h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;   /Basically it sets the boldness./
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav a{
+    font-size: 1rem;
+    color: inherit;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover{
+    color: #a7a7a7;
+}
+
+.btn-signing{
+    background-color: #a7a7a7;
+    padding: 0.8rem, 2rem;
+    border-radius: 20px/50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    width: 5rem;
+    height: 2.5rem;
+
+
+
+}
+.btn-signing:hover{
+    background-color: white;
+}
+
+/CONTENT-MAIN/
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(90vh - 6rem);
+}
+
+    .tag-box {
+        position: relative;
+        height: 2.5rem;
+        width: 18rem;
+        border-radius: 50px;
+        background: linear-gradient(to right, #656565, #7742a7, #6600e5, #5300a0,  #656565,  #656565);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: 200%;
+        animation: animationgradient 2.5s linear infinite;
+        box-shadow: 0 0 15px rgba(225, 225, 225, 0.3);
+    }
+    
+@keyframes animationgradient {
+    to{
+        background-position: 200%;;
+    }
+}
+    .tag{
+        position: absolute;
+        background-color: black;
+        border-radius: 50px;
+        height: 2rem;
+        width: 17.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /Both of these attributes are very important/
+        transition: 0.5s ease;
+        cursor: pointer;
+
+    }
+    .tag:hover{
+        color: #6600e5;
+    }
+    .content{
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    .content h1{
+        margin: 2rem 0;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        line-height: 1.2;
+        text-shadow: 0 0 15px lightslategray;
+    }
+    .content p{
+        color: gray;
+        max-width: 35rem;
+        letter-spacing: 0.05rem;
+        margin-bottom: 0.5rem;
+        
+
+    }
+
+
+    /BUTTONS/
+    .btnClass{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button{
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.4rem;
+    }
+    .btn-get-started{
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        left: 0.1rem;
+        border: solid 2px #2a2a2a;
+        padding: 0.4rem 1.4rem;
+        border-radius: 50px;
+
+    }
+    #headings{
+        font-weight: bolder;
+        opacity: 90%;
+    }
+    .btn-get-started:hover{
+        background-color: #2a2a2a;
+        transform: scale(1.2);
+        box-shadow: 2px 29x 10px  grey;
+    
+    }
+
+    .btn-signing-main{
+        background-color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        left: 0.1rem;
+        border: solid 2px transparent;
+        padding: 0.4rem 1.4rem;
+        border-radius: 50px;
+        transform: scale(1.2);
+        box-shadow: 2px 29x 10px  grey;
+        margin-left: 30px;
+
+    }
+    .btn-signing-main:hover{
+        background-color: lightgrey;
+    }
+    /ROBOT 3D MODEL/
+    /* .robot-3d{
+        position: absolute;
+        top: 0;
+        z-index: -10;
+        right: -20%
+
+
+    }
+
+    /MEDIA QUERIES/
+
+    @media (max-width :1300px){
+        header{
+            padding: 1rem 0.5rem;
+        }
+        .content{
+            margin-top: 85%;
+        }
+        .robot-3d{
+            scale: 1.6;
+    
+            right: 2rem;
+            top: 85%
+            /* box-shadow: 0 0 15px  purple; */
+        }
+
+    }
+
+    @media (max-width: 768px){
+        
+        header{
+            padding: 1rem 0.1rem;
+        }
+        .content{
+            margin-top: 110%;
+
+        }
+        .robot-3d{
+            scale: 1;
+        }
+    } */
+
+
+    /* information styling */
+   .flex-item{
+    /* padding: 0 15px; */
+   }
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   .img{
+    height: 200px; width: 200px;
+   }
+
+   /* // search bar code */
+   .search-box {
+    min-height: 69px;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    background: #191919;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 
+        0 0 10px rgba(187, 134, 252, 1),
+        0 0 20px rgba(255, 121, 198, 0.8);
+    /* width: 300px; */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .search-box input::placeholder {
+    color: #888;
+  }
+  
+  /* Light glow effect when typing */
+  .search-box input:focus {
+  }
+  
+  /* Box glow effect */
+  .search-box:focus-within {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Search icon hover effect */
+  .search-box .search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #888;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+  
+  .search-box:hover .search-icon,
+  .search-box:focus-within .search-icon {
+    fill: #fff;
+  }
+  
+
+/* appending of the tasks */
+h1{
+    color: white;
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem ;
+    
+}
+
+/* tasks styling */
+.task-card {
+    background: #1e1e1e; /* Dark theme */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    max-width: 400px;
+    min-width: 400px;
+    text-align: center;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    gap: 10px; /* Space between text and button */
+    transition: backgroundColor 0.5s ease;
+  }
+  .container2{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* senior detail styling */
+  
+.container3 {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+.organizers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.organizer {
+    width: 180px;
+    text-align: center;
+}
+
+.organizer img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #BB86FC;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+p {
+    color: #BBBBBB;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+a {
+    color: #BB86FC;
+    font-size: 1.4rem; /* Larger links */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 
+        0 0 10px rgba(187, 134, 252, 1),
+        0 0 20px rgba(255, 121, 198, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #FF79C6;
+    text-shadow: 
+        0 0 15px rgba(255, 121, 198, 1),
+        0 0 30px rgba(255, 121, 198, 0.8),
+        0 0 45px rgba(255, 255, 255, 0.5);
+}
