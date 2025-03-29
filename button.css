@@ -1,0 +1,41 @@
+/* Social Button Container */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Circular Button */
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1E1E;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+/* Hover Effects */
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+/* LinkedIn Button */
+.linkedin:hover {
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.7);
+}
+
+/* Instagram Button */
+.instagram:hover {
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.7);
+}

@@ -1,0 +1,88 @@
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px; /* Slightly wider container */
+    margin: 50px auto; /* Added top margin */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 3.5rem; /* Increased size */
+    font-weight: bold;
+    text-shadow: 
+        0 0 15px rgba(187, 134, 252, 1), 
+        0 0 30px rgba(255, 121, 198, 0.8),
+        0 0 45px rgba(255, 121, 198, 0.5);
+}
+
+p {
+    color: #BBBBBB;
+    font-size: 1.3rem; /* Slightly larger */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 18px rgba(187, 134, 252, 0.2);
+}
+
+/* SEARCH BAR */
+.search-bar {
+    background-color: #1E1E1E;
+    padding: 20px; /* Increased padding */
+    border-radius: 12px;
+    display: flex;
+    gap: 15px; /* Increased gap */
+    justify-content: center;
+    align-items: center;
+    margin: 50px 30px 20px; /* Added left & top margin */
+}
+
+input, select {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #333;
+    padding: 12px 15px; /* Increased padding */
+    border-radius: 8px;
+    font-size: 1.2rem; /* Larger text */
+    width: 280px; /* Increased width */
+}
+
+input::placeholder {
+    color: #888;
+    font-size: 1rem;
+}
+
+.view-toggle {
+    margin: 20px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #BB86FC;
+    text-shadow: 
+        0 0 10px rgba(187, 134, 252, 0.9),
+        0 0 20px rgba(255, 121, 198, 0.6);
+}
+
+a {
+    color: #BB86FC;
+    font-size: 1.4rem; /* Larger links */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 
+        0 0 10px rgba(187, 134, 252, 1),
+        0 0 20px rgba(255, 121, 198, 0.8);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #FF79C6;
+    text-shadow: 
+        0 0 15px rgba(255, 121, 198, 1),
+        0 0 30px rgba(255, 121, 198, 0.8),
+        0 0 45px rgba(255, 255, 255, 0.5);
+}

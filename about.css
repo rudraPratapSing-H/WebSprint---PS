@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 12px rgba(187, 134, 252, 1), 0 0 24px rgba(255, 121, 198, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #BB86FC;
+    text-shadow: 0 0 8px rgba(187, 134, 252, 0.8);
+}
+
+.card p {
+    font-size: 1rem;
+    color: #BBBBBB;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 121, 198, 0.6);
+}
